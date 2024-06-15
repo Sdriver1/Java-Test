@@ -16,26 +16,21 @@ public class Calculator {
             double result;
 
             switch (operator) {
-                case '+':
-                    result = firstNumber + secondNumber;
-                    break;
-                case '-':
-                    result = firstNumber - secondNumber;
-                    break;
-                case '*':
-                    result = firstNumber * secondNumber;
-                    break;
-                case '/':
+                case '+' -> result = firstNumber + secondNumber;
+                case '-' -> result = firstNumber - secondNumber;
+                case '*' -> result = firstNumber * secondNumber;
+                case '/' -> {
                     if (secondNumber != 0) {
                         result = firstNumber / secondNumber;
                     } else {
                         System.out.println("Error: Division by zero is not allowed.");
                         return;
                     }
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Error: Invalid operator.");
                     return;
+                }
             }
 
             System.out.printf("Result: %.2f %c %.2f = %.2f\n", firstNumber, operator, secondNumber, result);
