@@ -1,6 +1,8 @@
+
 import java.util.Scanner;
 
 public class Calculator {
+
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Welcome to the Simple Calculator");
@@ -16,16 +18,18 @@ public class Calculator {
             double result;
 
             switch (operator) {
-                case '+' -> result = firstNumber + secondNumber;
-                case '-' -> result = firstNumber - secondNumber;
-                case '*' -> result = firstNumber * secondNumber;
+                case '+' ->
+                    result = firstNumber + secondNumber;
+                case '-' ->
+                    result = firstNumber - secondNumber;
+                case '*' ->
+                    result = firstNumber * secondNumber;
                 case '/' -> {
-                    if (secondNumber != 0) {
-                        result = firstNumber / secondNumber;
-                    } else {
+                    if (secondNumber == 0) {
                         System.out.println("Error: Division by zero is not allowed.");
                         return;
                     }
+                    result = firstNumber / secondNumber;
                 }
                 default -> {
                     System.out.println("Error: Invalid operator.");

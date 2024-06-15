@@ -1,8 +1,10 @@
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class restaurant {
+
     public static void main(String[] args) {
         String[] foodMenu = {"Pizza", "Burger", "Pasta", "French Fries", "Sandwich"};
         double[] foodPrices = {5.00, 4.00, 6.00, 3.00, 2.00};
@@ -58,7 +60,8 @@ public class restaurant {
                         }
                         return;
                     }
-                    default -> System.out.println("Invalid choice");
+                    default ->
+                        System.out.println("Invalid choice");
                 }
 
                 scanner.nextLine();
@@ -126,9 +129,9 @@ public class restaurant {
     }
 
     private static boolean isValidOrder(String order, String[] foodMenu, double[] foodPrices,
-                                        String[] drinkMenu, double[] drinkPrices,
-                                        String[] dessertMenu, double[] dessertPrices,
-                                        List<String> orders, List<Double> prices) {
+            String[] drinkMenu, double[] drinkPrices,
+            String[] dessertMenu, double[] dessertPrices,
+            List<String> orders, List<Double> prices) {
         String[] parts = order.split(" ", 2);
         if (parts.length == 2) {
             try {
